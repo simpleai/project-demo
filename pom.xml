@@ -50,6 +50,12 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>${mybatis-springboot.version}</version>
         </dependency>
+        <!--参数校验-->
+        <!--valid 和 hibernate-validator包含在其中-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
         <!--&lt;!&ndash; MyBatis&ndash;&gt;
         <dependency>
             <groupId>org.mybatis</groupId>
