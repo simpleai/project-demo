@@ -92,8 +92,8 @@ public class UserNestValid {
 }
 ```
 
-## List校验
-
+## 自定义注解校验
+annotation
 
 ## 参数校验异常抓取
 ParamExceptionHandle
