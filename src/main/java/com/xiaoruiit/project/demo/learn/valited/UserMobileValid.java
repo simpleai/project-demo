@@ -1,8 +1,8 @@
 package com.xiaoruiit.project.demo.learn.valited;
 
+import com.xiaoruiit.project.demo.learn.valited.annotation.Mobile;
 import lombok.Data;
 
-import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -12,15 +12,12 @@ import javax.validation.constraints.NotNull;
  * @date 2022/2/17
  */
 @Data
-public class UserValid {
+public class UserMobileValid {
 
     @NotBlank
     private String userId;
 
-    @NotNull
-    private Integer age;
-
-    @Email
-    private String email;
+    @Mobile
+    private String mobile;
 
 }

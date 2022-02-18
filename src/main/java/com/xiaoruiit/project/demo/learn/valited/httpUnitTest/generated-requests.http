@@ -1,0 +1,72 @@
+POST http://127.0.0.1:8080/valited/addUser3
+Content-Type: application/json
+
+{
+  "userId":"1",
+  "mobile":"18"
+}
+
+###
+# curl --location --request POST 'http://127.0.0.1:8080/valited/addUser2'
+#--header 'Authorization: 1'
+#--header 'BranchId: 5338'
+#--header 'Content-Type: application/json'
+#--data-raw '{
+#    "userId":"1",
+#    "age":"18",
+#    "userDetail" : {
+#        "currentAddress":"1"
+#    }
+#}'
+POST http://127.0.0.1:8080/valited/addUser2
+Authorization: 1
+BranchId: 5338
+Content-Type: application/json
+
+{
+    "userId":"1",
+    "age":"18",
+    "userDetail" : {
+        "currentAddress":"1"
+    }
+}
+
+###
+
+# curl --location --request POST 'http://127.0.0.1:8080/valited/addUser2'
+#--header 'Authorization: 1'
+#--header 'BranchId: 5338'
+#--header 'Content-Type: application/json'
+#--data-raw '{
+#    "userId":"1",
+#    "age":"18",
+#    "userDetail" : {
+#        "currentAddress":""
+#    }
+#}'
+POST http://127.0.0.1:8080/valited/addUser2
+Authorization: 1
+BranchId: 5338
+Content-Type: application/json
+
+{
+    "userId":"1",
+    "age":"18",
+    "userDetail" : {
+        "currentAddress":""
+    }
+}
+
+###
+
+# 参数校验
+# post 实体
+POST http://127.0.0.1:8080/valited/addUser
+Content-Type: application/json
+
+{
+  "userId": "1",
+  "age": "18",
+  "email": "111@163.com"
+}
+

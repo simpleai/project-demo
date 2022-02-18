@@ -52,4 +52,12 @@ public class ValitedTestController {
     public Result addUsers(@Validated @RequestBody List<UserNestValid> userNestValids){
         return Result.success();
     }
+
+    /**
+     * 自定义注解手机号校验
+     */
+    @PostMapping("/addUser3")
+    public Result addUsers(@Validated @RequestBody UserMobileValid userMobileValid){
+        return Result.success();
+    }
 }
