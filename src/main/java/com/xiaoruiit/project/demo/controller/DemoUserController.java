@@ -14,12 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
 @RequestMapping("/demo/user")
+//@Api("测试swagger")
 public class DemoUserController {
 
     @Autowired
     private DemoUserService demoUserService;
 
     @GetMapping("/getUser")
+    //@ApiOperation(value = "获取user", notes = "获取user",httpMethod = "GET")
     public String demoUser(@RequestParam("userId") String userId){
         return demoUserService.getUser(userId);
     }
