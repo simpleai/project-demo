@@ -17,10 +17,14 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return new CallerInfoInterceptor();
     }
 
+    /**
+     * 绑定拦截器
+     * @param registry
+     */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(requestHeaderContextInterceptor())
-                .addPathPatterns("/**");
+                .addPathPatterns("/**");// 拦截所有请求
         WebMvcConfigurer.super.addInterceptors(registry);
     }
 }

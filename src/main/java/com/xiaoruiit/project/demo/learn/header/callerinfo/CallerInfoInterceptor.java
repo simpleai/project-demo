@@ -62,6 +62,4 @@ public class CallerInfoInterceptor extends HandlerInterceptorAdapter {
                                 @Nullable Exception ex) throws Exception {
         CallerInfo.removeCallerInfo();
     }
-
-
 }
