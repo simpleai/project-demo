@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: hr
+  profiles:
+    active: "@profileActive@"
   data-base:
     name: demo
   datasource:

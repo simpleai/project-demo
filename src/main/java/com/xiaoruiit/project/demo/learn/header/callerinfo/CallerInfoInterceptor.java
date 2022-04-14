@@ -2,6 +2,7 @@ package com.xiaoruiit.project.demo.learn.header.callerinfo;
 
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -21,6 +22,9 @@ import java.nio.charset.StandardCharsets;
 @Component
 public class CallerInfoInterceptor extends HandlerInterceptorAdapter {
 
+    @Value("${spring.profiles.active}")
+    private String env;
+
     /**
      * 请求被处理前，拦截器拦截，提取调用者信息，放入local
      * @param request
@@ -32,6 +36,15 @@ public class CallerInfoInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         try {
+            if ("dev".equals(env) && request.getHeader("userCode") == null){
+                CallerInfo callerInfo = new CallerInfo();
+                callerInfo.setUserCode("U123");
+                callerInfo.setUserName("hxr");
+                CallerInfo.setCallerInfo(callerInfo);
+
+                return true;
+            }
+
             String userName = URLDecoder.decode(request.getHeader("userName"), StandardCharsets.UTF_8.toString());// URLDecoder解决乱码
             String userCode = request.getHeader("userCode");
 
@@ -44,7 +57,7 @@ public class CallerInfoInterceptor extends HandlerInterceptorAdapter {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (NullPointerException e){
-
+            log.error("获取上游调用者失败，{}",e);
         }
         return true;
     }
