@@ -24,7 +24,8 @@ public class UserServiceImpl implements UserService {
             CacheBuilder.newBuilder()
                     .maximumSize(400) // maximum 400 records can be cached
                     .softValues() // soft reference. no RAM, clean productBarCodeVos
-                    .expireAfterAccess(1, TimeUnit.MINUTES) // cache will expire after 1 minutes of access
+                    //.expireAfterAccess(1, TimeUnit.MINUTES) // cache will expire after 1 minutes of access
+                    .refreshAfterWrite(1,TimeUnit.SECONDS)
                     .build(new CacheLoader<String, UserVo>(){ // build the cacheloader
                         @Override
                         public UserVo load(String userCode) {
@@ -37,6 +38,7 @@ public class UserServiceImpl implements UserService {
     public UserVo getUserVoByCode(String userCode) {
         UserVo userVo = new UserVo();
         if (userCode == "admin"){
+            System.out.println("admin");
             userVo.setUserCode("admin");
             userVo.setUserName("admin");
             return userVo;
