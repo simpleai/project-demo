@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: hr
+    name: demo
 #  profiles:
 #    active: "@profileActive@"
   data-base:
