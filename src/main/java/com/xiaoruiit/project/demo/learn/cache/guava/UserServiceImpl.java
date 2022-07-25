@@ -1,4 +1,4 @@
-package com.xiaoruiit.project.demo.learn.cache;
+package com.xiaoruiit.project.demo.learn.cache.guava;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;

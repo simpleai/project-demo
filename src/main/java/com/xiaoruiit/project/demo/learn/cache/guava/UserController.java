@@ -1,4 +1,4 @@
-package com.xiaoruiit.project.demo.learn.cache;
+package com.xiaoruiit.project.demo.learn.cache.guava;
 
 import com.xiaoruiit.project.demo.common.Result;
 import org.springframework.beans.factory.annotation.Autowired;

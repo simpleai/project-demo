@@ -1,7 +1,7 @@
 package com.xiaotuiit.project.demo.cache;
 
 import com.xiaoruiit.project.demo.DemoApplication;
-import com.xiaoruiit.project.demo.learn.cache.UserService;
+import com.xiaoruiit.project.demo.learn.cache.guava.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
