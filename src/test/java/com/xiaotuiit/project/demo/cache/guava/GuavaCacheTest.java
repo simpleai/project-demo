@@ -1,4 +1,4 @@
-package com.xiaotuiit.project.demo.cache;
+package com.xiaotuiit.project.demo.cache.guava;
 
 import com.xiaoruiit.project.demo.DemoApplication;
 import com.xiaoruiit.project.demo.learn.cache.guava.UserService;
