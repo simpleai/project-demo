@@ -31,7 +31,7 @@ public class MultiThreadPartialCalls {
         // 分批调用
         splitList.forEach(childSkuCodes -> {
             Future<List<OrderCargoDto>> future = executorService.submit(() -> {
-                return orderCargoFeignClient.getBatchByCodes(branchCode, skuCodes);// 获取sku信息
+                return orderCargoFeignClient.getBatchByCodes(branchCode, childSkuCodes);// 获取sku信息
             });
             futureList.add(future);
         });
