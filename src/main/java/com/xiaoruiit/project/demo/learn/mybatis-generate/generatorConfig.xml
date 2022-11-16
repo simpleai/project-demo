@@ -63,6 +63,12 @@
             &lt;!&ndash;<property name="modelSuffix" value="AutoEntity"/>&ndash;&gt;
         </plugin>-->
 
+        <!-- mybatis 与swagger 生成的实体类注释-->
+        <plugin type="mybatis.generator.plugins.GeneratorSwagger2Doc">
+            <property name="apiModelAnnotationPackage" value="io.swagger.annotations.ApiModel"/>
+            <property name="apiModelPropertyAnnotationPackage" value="io.swagger.annotations.ApiModelProperty"/>
+        </plugin>
+
         <commentGenerator>
             <!--是否去除默认生成的注释-->
             <property name="suppressAllComments" value="true"/>

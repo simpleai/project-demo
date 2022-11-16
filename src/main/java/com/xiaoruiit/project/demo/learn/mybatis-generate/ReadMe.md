@@ -24,13 +24,23 @@
                         <artifactId>mysql-connector-java</artifactId>
                         <version>8.0.20</version>
                     </dependency>
-                    <!--  &lt;!&ndash;非官方插件引入&ndash;&gt;-->
+                    <!--非官方插件引入-->
                     <dependency>
                         <groupId>com.itfsw</groupId>
                         <artifactId>mybatis-generator-plugin</artifactId>
                         <version>1.3.8</version>
                     </dependency>
-
+                    <!--swagger+mybatis-->
+                    <dependency>
+                        <groupId>com.spring4all</groupId>
+                        <artifactId>swagger-spring-boot-starter</artifactId>
+                        <version>1.9.0.RELEASE</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.github.misterchangray.mybatis.generator.plugins</groupId>
+                        <artifactId>myBatisGeneratorPlugins</artifactId>
+                        <version>1.2</version>
+                    </dependency>
                 </dependencies>
             </plugin>
 ```
@@ -103,6 +113,12 @@ generatorConfig.xml
             &lt;!&ndash; tb -> TbAutoEntity &ndash;&gt;
             &lt;!&ndash;<property name="modelSuffix" value="AutoEntity"/>&ndash;&gt;
         </plugin>-->
+        
+       <!-- mybatis 与swagger 生成的实体类注释-->
+        <plugin type="mybatis.generator.plugins.GeneratorSwagger2Doc">
+            <property name="apiModelAnnotationPackage" value="io.swagger.annotations.ApiModel"/>
+            <property name="apiModelPropertyAnnotationPackage" value="io.swagger.annotations.ApiModelProperty"/>
+        </plugin>
 
         <commentGenerator>
             <!--是否去除默认生成的注释-->
