@@ -2,6 +2,7 @@ package com.xiaoruiit.project.demo.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.xiaoruiit.project.demo.exception.BizException;
 
 /**
  * jackJson 达到 fastJson使用
@@ -16,7 +17,7 @@ public class JSON {
             return objectMapper.writeValueAsString(object);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
+            throw new BizException();
         }
-        return null;
     }
 }
