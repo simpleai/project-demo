@@ -11,8 +11,8 @@ import java.util.List;
  * @date 2022/12/28
  */
 @RestController()
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/response/user")
+public class ResponseUserController {
 
     @Autowired
     private UserService userService;

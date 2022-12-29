@@ -20,7 +20,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @Service
 @Slf4j
-public class UserServiceImpl implements UserService {
+public class GuavaUserServiceImpl implements UserService {
 
     private ExecutorService executorService = Executors.newFixedThreadPool(5);
 

@@ -1,24 +1,27 @@
-package com.xiaotuiit.project.demo.cache.guava;
+package com.xiaoruiit.project.demo.learn.cache.redis;
 
 import com.xiaoruiit.project.demo.DemoApplication;
-import com.xiaoruiit.project.demo.learn.cache.guava.UserService;
+import com.xiaoruiit.project.demo.utils.JSON;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-/**
- * @author hanxiaorui
- * @date 2022/6/28
- */
+import java.util.List;
+
+
 @SpringBootTest(
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
         classes = DemoApplication.class)
-public class GuavaCacheTest {
+class UserRedisServiceImplTest {
+
     @Autowired
-    UserService userService;
+    UserRedisService userService;
 
     @Test
-    public void testGuavaCache(){
-        userService.getUserVoCache("admin");
+    void getUserList() {
+        List<User> userList = userService.getUserList();
+        System.out.println("getUserList:" + JSON.toJSONString(userList));
     }
+
+
 }

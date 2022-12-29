@@ -12,7 +12,7 @@ import java.util.List;
  * @date 2022/12/28
  */
 @Service
-public class UserServiceImpl implements UserService{
+public class ResponseUserServiceImpl implements UserService{
     @Override
     public Result<List<?>> findByCode(String code, UserInfoDtoEnum returnType) {
         // redis或数据库查询
