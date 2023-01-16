@@ -11,8 +11,8 @@
                 <configuration>
                     <!--配置文件路径，可以写绝对路径，也可以写相对路径-->
                     <configurationFile>
-                		<!-- TODO 1. ->
-                        src/main/resources/generator-config/generatorConfig.xml
+                		<!-- TODO 1. -->
+                        src/main/resources/mybatis-generator/generatorConfig.xml
                     </configurationFile>
                     <overwrite>true</overwrite>
                     <verbose>true</verbose>
