@@ -10,6 +10,7 @@
                 <version>1.3.7</version>
                 <configuration>
                     <!--配置文件路径，可以写绝对路径，也可以写相对路径-->
+
                     <configurationFile>
                 		<!-- TODO 1. -->
                         src/main/resources/mybatis-generator/generatorConfig.xml
