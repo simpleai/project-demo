@@ -13,10 +13,10 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
  */
 
 @Slf4j
-public class PRO_JDBCUtils {
+public class JDBCUtils {
     //  type: com.alibaba.druid.pool.DruidDataSource
     //    driverClassName: com.mysql.cj.jdbc.Driver
-    static String url = "jdbc:mysql://127.0.0.1?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true";
+    static String url = "jdbc:mysql://127.0.0.1:3306?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true";
     static String username = "root";
     static String password = "123456";
 
