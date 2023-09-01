@@ -1,4 +1,4 @@
-package com.xiaoruiit.project.demo.utils;
+package com.xiaoruiit.project.demo.infrastructure.utils;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;

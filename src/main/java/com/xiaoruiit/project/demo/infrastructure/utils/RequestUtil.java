@@ -1,4 +1,4 @@
-package com.xiaoruiit.project.demo.utils;
+package com.xiaoruiit.project.demo.infrastructure.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.context.request.RequestContextHolder;

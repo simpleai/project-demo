@@ -1,4 +1,4 @@
-package com.xiaoruiit.project.demo.exception;
+package com.xiaoruiit.project.demo.infrastructure.config.exception;
 
 /**
  * @author hanxiaorui

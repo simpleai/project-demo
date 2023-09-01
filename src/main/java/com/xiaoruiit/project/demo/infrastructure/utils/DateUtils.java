@@ -1,4 +1,4 @@
-package com.xiaoruiit.project.demo.utils;
+package com.xiaoruiit.project.demo.infrastructure.utils;
 
 import java.lang.management.ManagementFactory;
 import java.text.ParseException;

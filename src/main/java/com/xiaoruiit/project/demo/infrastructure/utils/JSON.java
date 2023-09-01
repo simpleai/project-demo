@@ -1,8 +1,8 @@
-package com.xiaoruiit.project.demo.utils;
+package com.xiaoruiit.project.demo.infrastructure.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.xiaoruiit.project.demo.exception.BizException;
+import com.xiaoruiit.project.demo.infrastructure.config.exception.BizException;
 
 /**
  * jackJson 达到 fastJson使用

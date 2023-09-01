@@ -1,4 +1,4 @@
-package com.xiaoruiit.project.demo.utils;
+package com.xiaoruiit.project.demo.infrastructure.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JavaType;
@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import com.xiaoruiit.project.demo.exception.BizException;
+import com.xiaoruiit.project.demo.infrastructure.config.exception.BizException;
 import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

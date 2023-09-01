@@ -1,6 +1,6 @@
-package com.xiaoruiit.project.demo.controller;
+package com.xiaoruiit.project.demo.interfaces.controller;
 
-import com.xiaoruiit.project.demo.service.DemoUserService;
+import com.xiaoruiit.project.demo.application.service.DemoUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

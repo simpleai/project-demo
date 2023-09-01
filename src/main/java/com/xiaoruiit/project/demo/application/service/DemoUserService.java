@@ -1,4 +1,4 @@
-package com.xiaoruiit.project.demo.service;
+package com.xiaoruiit.project.demo.application.service;
 
 /**
  * @author hanxiaorui

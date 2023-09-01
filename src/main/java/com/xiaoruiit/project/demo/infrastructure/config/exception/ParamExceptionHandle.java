@@ -1,13 +1,12 @@
-package com.xiaoruiit.project.demo.exception;
+package com.xiaoruiit.project.demo.infrastructure.config.exception;
 
-import com.xiaoruiit.project.demo.common.ApiCodes;
-import com.xiaoruiit.project.demo.common.Result;
-import com.xiaoruiit.project.demo.utils.JSON;
+import com.xiaoruiit.project.demo.interfaces.common.ApiCodes;
+import com.xiaoruiit.project.demo.interfaces.common.Result;
+import com.xiaoruiit.project.demo.infrastructure.utils.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

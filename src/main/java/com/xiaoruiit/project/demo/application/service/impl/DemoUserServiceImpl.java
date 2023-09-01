@@ -1,6 +1,6 @@
-package com.xiaoruiit.project.demo.service.impl;
+package com.xiaoruiit.project.demo.application.service.impl;
 
-import com.xiaoruiit.project.demo.service.DemoUserService;
+import com.xiaoruiit.project.demo.application.service.DemoUserService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,6 +14,6 @@ public class DemoUserServiceImpl implements DemoUserService {
 
     @Override
     public String getUser(String userId) {
-        return null;
+        return "user";
     }
 }

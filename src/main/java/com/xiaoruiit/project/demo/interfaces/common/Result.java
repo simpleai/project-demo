@@ -1,4 +1,4 @@
-package com.xiaoruiit.project.demo.common;
+package com.xiaoruiit.project.demo.interfaces.common;
 
 import java.io.Serializable;
 

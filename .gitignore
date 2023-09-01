@@ -1,8 +1,45 @@
-# Project exclude paths
-/target/
-/.idea/compiler.xml
-/.idea/encodings.xml
-/.idea/jarRepositories.xml
-/.idea/misc.xml
-/.idea/uiDesigner.xml
-/.idea/vcs.xml
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+######################################################################
+# Others
+*.log
+*.xml.versionsBackup
+*.swp
+*.log.zip
+
+!*/build/*.java
+!*/build/*.html
+!*/build/*.xml
+/logs/

@@ -6,32 +6,76 @@ spring:
     name: demo
   profiles:
     active: "@profileActive@"
-  data-base:
-    name: demo
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    type: com.alibaba.druid.pool.DruidDataSource
-#    # 连接池初始化大小
-#    initialSize: 5
-#    # 最小空闲连接数
-#    minIdle: 10
-#    # 最大连接数
-#    maxActive: 20
-#    # 获取连接超时时间
-#    maxWait: 60000
-#    # 连接有效性检测时间
-#    timeBetweenEvictionRunsMillis: 60000
-#    # 最小空闲时间
-#    minEvictableIdleTimeMillis: 30000
-#    testWhileIdle: true
-#    testOnBorrow: false
-#    testOnReturn: false
-#    poolPreparedStatements: true
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: 123456
+    druid:
+      # 初始连接数
+      initialSize: 5
+      # 最小连接池数量
+      minIdle: 20
+      # 最大连接池数量
+      maxActive: 100
+      # 配置获取连接等待超时的时间
+      maxWait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 300000
+      # 配置一个连接在池中最大生存的时间，单位是毫秒
+      maxEvictableIdleTimeMillis: 900000
+      # 配置检测连接是否有效
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      webStatFilter:
+        enabled: true
+      statViewServlet:
+        enabled: true
+        # 设置白名单，不填则允许所有访问
+        allow:
+        url-pattern: /druid/*
+        # 控制台管理用户名和密码
+        login-username:
+        login-password:
+      filter:
+        stat:
+          enabled: true
+          # 慢SQL记录
+          log-slow-sql: true
+          slow-sql-millis: 1000
+          merge-sql: true
+        wall:
+          config:
+            multi-statement-allow: true
 
 mybatis:
-  mapper-locations:
-    - classpath*:mapper/**/*.xml
+  # 加载全局的配置文件
+  configLocation: classpath:mybatis/mybatis-config.xml
+  global-config:
+    # 数据库相关配置
+    db-config:
+      #逻辑删除配置
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+
+mybatis-plus:
+  ## 这个可以不用配置，因其默认就是这个路径
+  mapper-locations: classpath:/mapper/**/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.xiaoruiit.project.demo.infrastructure.driver.entity
   configuration:
-    map-underscore-to-camel-case: true
-    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
-  type-aliases-package: com.xiaoruiit.project.**.entity
+    cache-enabled: false
+  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+  global-config:
+    #刷新mapper 调试神器
+    refresh: true
+    #驼峰下划线转换
+    #table-underline: true
+    #数据库大写下划线转换
+    #capital-mode: true
+

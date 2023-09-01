@@ -1,4 +1,4 @@
-package com.xiaoruiit.project.demo.common;
+package com.xiaoruiit.project.demo.interfaces.common;
 
 /**
  * 后端返回码
